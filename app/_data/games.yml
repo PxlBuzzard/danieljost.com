@@ -1,4 +1,16 @@
 ---
+- game: spectral
+  name: "Spectral Robot Task Force"
+  thumb: spectral.png
+  short_desc: A multiplayer turn-based strategy game with robot ghosts fighting werewolves.
+  link: http://circularstudios.com/
+
+- game: dash
+  name: "Dash Engine"
+  thumb: dash.png
+  short_desc: A free and open 3D game engine written in D.
+  link: https://github.com/Circular-Studios/Dash
+
 - game: sgpx
   name: "SGPX"
   thumb: sgpx.png

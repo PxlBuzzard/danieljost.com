@@ -1,4 +1,10 @@
 ---
+- website: statsatlast
+  name: "Stats At Last"
+  year: "Spring 2014"
+  thumb: statsatlast.png
+  link: "http://statsatlast.com/"
+
 - website: openmusic
   name: "OpenMusic"
   year: "Fall 2013"
