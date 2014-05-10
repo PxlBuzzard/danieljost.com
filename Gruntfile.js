@@ -24,11 +24,11 @@ module.exports = function (grunt) {
     watch: {
       compass: {
         files: ['<%= yeoman.app %>/_scss/**/*.{scss,sass}'],
-        tasks: ['compass:server', 'autoprefixer:server']
+        tasks: ['compass:server', 'autoprefixer:dist']
       },
       autoprefixer: {
         files: ['<%= yeoman.app %>/css/**/*.css'],
-        tasks: ['copy:stageCss', 'autoprefixer:server']
+        tasks: ['copy:stageCss', 'autoprefixer:dist']
       },
       jekyll: {
         files: [
@@ -43,8 +43,8 @@ module.exports = function (grunt) {
         },
         files: [
           '.jekyll/**/*.html',
-          '.tmp/css/**/*.css',
-          '{.tmp,<%= yeoman.app %>}/<%= jsDir %>/**/*.js',
+          '<%= yeoman.app %>/<%= cssDir %>/**/*.css',
+          '<%= yeoman.app %>/<%= jsDir %>/**/*.js',
           '<%= yeoman.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
         ]
       }
@@ -60,9 +60,9 @@ module.exports = function (grunt) {
         options: {
           open: true,
           base: [
-            '.tmp',
             '.jekyll',
-            '<%= yeoman.app %>'
+            '<%= yeoman.app %>',
+            '<%= yeoman.dist %>'
           ]
         }
       },
@@ -77,7 +77,6 @@ module.exports = function (grunt) {
       test: {
         options: {
           base: [
-            '.tmp',
             '.jekyll',
             'test',
             '<%= yeoman.app %>'
@@ -95,14 +94,13 @@ module.exports = function (grunt) {
             // Running Jekyll also cleans the target directory.  Exclude any
             // non-standard `keep_files` here (e.g., the generated files
             // directory from Jekyll Picture Tag).
-            '!<%= yeoman.dist %>/.git*',
-            '!<%= yeoman.dist %>/src*'
+            '!<%= yeoman.dist %>/.git*'
           ]
         }]
       },
       server: [
-        '.tmp',
-        '.jekyll'
+        '.jekyll',
+        '<%= yeoman.dist %>'
       ]
     },
     compass: {
@@ -128,7 +126,7 @@ module.exports = function (grunt) {
       server: {
         options: {
           debugInfo: true,
-          generatedImagesDir: '.tmp/img/generated'
+          generatedImagesDir: '<%= yeoman.dist %>/img/generated'
         }
       }
     },
@@ -140,16 +138,16 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.dist %>/css',
-          src: '**/*.css',
+          src: '**/{css,concat}/*.css',
           dest: '<%= yeoman.dist %>/css'
         }]
       },
       server: {
         files: [{
           expand: true,
-          cwd: '.tmp/css',
+          cwd: '<%= yeoman.dist %>/css',
           src: '**/*.css',
-          dest: '.tmp/css'
+          dest: '<%= yeoman.dist %>/css'
         }]
       }
     },
@@ -256,8 +254,7 @@ module.exports = function (grunt) {
             // Like Jekyll, exclude files & folders prefixed with an underscore.
             '!**/_*{,/**}',
             // Explicitly add any files your site needs for distribution here.
-            'favicon.ico',
-            'CNAME'
+            'favicon.ico'
           ],
           dest: '<%= yeoman.dist %>'
         }]
@@ -272,14 +269,14 @@ module.exports = function (grunt) {
           dest: '../'
         }]
       },
-      // Copy CSS into .tmp directory for Autoprefixer processing
+      // Copy CSS into <%= yeoman.dist %> directory for Autoprefixer processing
       stageCss: {
         files: [{
           expand: true,
           dot: true,
           cwd: '<%= yeoman.app %>/css',
           src: '**/*.css',
-          dest: '.tmp/css'
+          dest: '<%= yeoman.dist %>/css'
         }]
       }
     },
@@ -333,11 +330,6 @@ module.exports = function (grunt) {
     ]);
   });
 
-  grunt.registerTask('server', function () {
-    grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
-    grunt.task.run(['serve']);
-  });
-
   // No real tests yet. Add your own.
   grunt.registerTask('test', [
   //   'clean:server',
@@ -366,8 +358,8 @@ module.exports = function (grunt) {
     //'svgmin',
     'usemin',
     'htmlmin',
-    'copy:moveCompiled',
-    'clean'
+    //'copy:moveCompiled',
+    //'clean'
     ]);
 
   grunt.registerTask('default', [
