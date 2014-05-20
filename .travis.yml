@@ -3,6 +3,7 @@ node_js:
 - '0.10'
 install:
   - travis_retry gem install --no-document jekyll -v 1.4.2
+  - travis_retry gem install --no-document sass -v 3.2.19
   - travis_retry npm install -g grunt-cli
   - travis_retry npm install
 before_script: grunt build
