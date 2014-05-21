@@ -4,6 +4,7 @@ node_js:
 install:
   - travis_retry rvm @global do gem install --no-document jekyll -v 1.4.2
   - travis_retry rvm @global do gem install --no-document compass -v 0.12.6
+  - travis_retry rvm @global do gem install --no-document thor -v 0.18.1
   - travis_retry rvm @global do gem install --no-document bourbon -v 3.2.2
   - travis_retry rvm @global do gem install --no-document neat -v 1.5.0
   - travis_retry npm install -g grunt-cli
