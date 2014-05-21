@@ -6,6 +6,7 @@ install:
   - travis_retry npm install -g grunt-cli
   - travis_retry npm install
 before_script: grunt build
+after_script: ls
 deploy:
   provider: s3
   endpoint: danieljost.com.s3-website-us-east-1.amazonaws.com
