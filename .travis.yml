@@ -9,10 +9,12 @@ before_script: grunt build
 deploy:
   provider: s3
   endpoint: danieljost.com.s3-website-us-east-1.amazonaws.com
+  skip_cleanup: true
   access_key_id: AKIAI4EJPJXSTIZ3EKRA
   secret_access_key:
     secure: E+ywayOE+GLOngA2/pFiVp138KEDeLqcS9ieUFrTu913ANcTMYVrVJT6WVGeJ8GnjCOyOx9f+8A54L1iDf24+nSK6/hlH5a74+OXd5fEBrllLzWozgQHz3rkdrt8DPobuI5zWAc/mdwR+FoZGI9uuzOICavuRkc4nRL9f3vGgFY=
   bucket: danieljost.com
-  local-dir: ~/travis/dist/
+  local-dir: dist
   on:
     repo: PxlBuzzard/danieljost.com
+    branch: master
