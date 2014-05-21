@@ -1,4 +1,4 @@
-# danieljost.com
+# danieljost.com ![Travis](https://travis-ci.org/PxlBuzzard/danieljost.com.svg)
 
 This is the source code for my website, [danieljost.com](http://danieljost.com).
 
