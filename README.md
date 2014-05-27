@@ -16,6 +16,7 @@ Clone the repo and run ```grunt serve``` in the directory. To compile a static v
 
 ## Technology being used
 
+* [generator-jekyllrb](https://github.com/robwierzbowski/generator-jekyllrb) for the initial project structure
 * [Grunt](http://gruntjs.com/)
 * [SCSS](http://sass-lang.com/)
 * [Jekyll](http://jekyllrb.com/)
