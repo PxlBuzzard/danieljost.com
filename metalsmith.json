@@ -1,0 +1,17 @@
+{
+  "source": "src",
+  "destination": "build",
+  "plugins": {
+    "metalsmith-sass": {
+      "outputStyle": "nested"
+    },
+    "metalsmith-autoprefixer": {},
+    "metalsmith-templates": {
+      "engine": "nunjucks"
+    },
+    "metalsmith-watch": {
+      "pattern": "**/*",
+      "livereload": 7777
+    }
+  }
+}

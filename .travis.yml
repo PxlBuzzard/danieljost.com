@@ -14,7 +14,7 @@ deploy:
   secret_access_key:
     secure: E+ywayOE+GLOngA2/pFiVp138KEDeLqcS9ieUFrTu913ANcTMYVrVJT6WVGeJ8GnjCOyOx9f+8A54L1iDf24+nSK6/hlH5a74+OXd5fEBrllLzWozgQHz3rkdrt8DPobuI5zWAc/mdwR+FoZGI9uuzOICavuRkc4nRL9f3vGgFY=
   bucket: danieljost.com
-  local-dir: dist
+  local-dir: build
   on:
     repo: PxlBuzzard/danieljost.com
     branch: master
