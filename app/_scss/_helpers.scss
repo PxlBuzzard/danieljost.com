@@ -23,3 +23,8 @@ $rem-base: 16px !default;
   }
   @return $remValues;
 }
+
+// workaround for libsass collision (https://github.com/hcatlin/libsass/issues/151)
+@function saturate($value) {
+  @return #{ "saturate(" + $value + ")" };
+}

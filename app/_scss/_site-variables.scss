@@ -1,4 +1,4 @@
-@import 'neat/neat-helpers';
+@import 'neat-helpers';
 @import 'helpers';
 
 //colors
@@ -43,5 +43,5 @@ $topbar-dropdown-bg: rgba(0, 0, 0, 0);
 $border-box-sizing: false;
 
 // late imports
-@import 'bourbon/bourbon';
-@import 'neat/neat';
+@import 'bourbon';
+@import 'neat';

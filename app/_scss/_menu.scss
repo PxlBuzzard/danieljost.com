@@ -73,11 +73,11 @@
   }
 }
 
-@media only screen and (max-width: 509px) { 
+@media only screen and (max-width: 509px) {
   .top-bar .toggle-sidebar {
     position: absolute;
     top: 0;
-  
+
     .toggle-link {
       display: block;
       width: $topbar-height;
@@ -123,7 +123,7 @@
     display: inline;
     float: left;
   }
-  
+
   .dmenu_link {
     display: block;
     margin-bottom: 0;
@@ -134,19 +134,19 @@
     width: 100%;
     overflow: hidden;
     padding: 0 15px;
-  
+
     text-align: center;
     text-decoration: none;
     font-weight: bold;
     text-shadow: #FFF 0 100px;
-    
+
     // Color scheme
     color: #FFF;
     background: none;
-  
+
     // Transitions
     transition: all .35s;
-    
+
     // Pulls the text up using margins while increasing the height
     &:hover {
       text-shadow: #FFF 0 $topbar-height;

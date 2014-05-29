@@ -16,8 +16,8 @@
 // Basic Styling
 //
 
-*, 
-*:before, 
+*,
+*:before,
 *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -274,14 +274,14 @@ a.text_top {
     text-align: right;
     @include span-columns(8);
   }
-  
+
   li {
     list-style: none;
     display: inline-block;
     height: 60px;
     margin-right: 10px;
     line-height: 1.3;
-    
+
     .ss-icon {
       color: #C4C4C4;
       font-size: 50px;
