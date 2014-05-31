@@ -24,5 +24,6 @@ Thumbs.db
 app/_bower_components
 dist
 build
+out
 node_modules
 .tmp

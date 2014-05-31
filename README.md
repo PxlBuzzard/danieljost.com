@@ -12,7 +12,7 @@ Thank you for reading this and not just stealing things. Everything is fair game
 
 ## How to compile the source
 
-Clone the repo and run ```grunt serve``` in the directory. To compile a static version of the site, use ```grunt build```.
+Clone the repo and run ```npm install``` in the directory. To compile the site, use ```node build.js```.
 
 ## Technology being used
 

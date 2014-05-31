@@ -4,16 +4,15 @@
   "version": "0.2.0",
   "author": "Daniel Jost <daniel@danieljost.com> (http://danieljost.com)",
   "license": "Apache-2.0",
-  "description": "A metalsmith version of my website",
+  "description": "A docpad version of my website",
   "main": "build.js",
   "dependencies": {
-    "metalsmith-watch": "0.1.x",
-    "metalsmith-autoprefixer": "0.1.x",
-    "metalsmith-sass": "0.1.x",
-    "metalsmith-templates": "0.5.x",
-    "metalsmith": "0.8.x",
+    "docpad": "~6.66.0",
     "nunjucks": "1.0.x",
     "node-bourbon": "1.2.x",
-    "node-neat": "1.3.x"
+    "node-neat": "1.3.x",
+    "docpad-plugin-livereload": "~2.6.0",
+    "docpad-plugin-nodesass": "~2.3.0",
+    "docpad-plugin-consolidate": "~2.1.0"
   }
 }
