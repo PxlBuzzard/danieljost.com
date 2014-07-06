@@ -1,7 +1,7 @@
 ---
 title: home
 ---
-{% include header.html %}
+{% include "src/layouts/header.html" %}
 <div class="header_full">
   <a href="/games">
   <img src="/img/header/head-spectral.png" class="header_img" alt="MAGIC Center at RIT" />
@@ -36,4 +36,4 @@ title: home
     <p class="subgame_text">See my experience in game programming, team management, and web development.</p>
   </div>
 </div>
-{% include footer.html %}
+{% include "src/layouts/footer.html" %}

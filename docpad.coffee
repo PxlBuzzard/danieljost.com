@@ -1,9 +1,8 @@
 # DocPad Configuration
 docpadConfig = {
-    plugins:
-        consolidate:
-            nunjucks: true
-            partials: 'src/layouts'
+  plugins:
+    nodesass:
+      neat: true
 }
 # Export the DocPad Configuration
 module.exports = docpadConfig
