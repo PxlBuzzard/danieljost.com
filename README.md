@@ -16,10 +16,8 @@ Clone the repo and run ```npm install``` in the directory. To compile the site, 
 
 ## Technology being used
 
-* [generator-jekyllrb](https://github.com/robwierzbowski/generator-jekyllrb) for the initial project structure
-* [Grunt](http://gruntjs.com/)
+* [DocPad](http://docpad.org/) as the build system.
 * [SCSS](http://sass-lang.com/)
-* [Jekyll](http://jekyllrb.com/)
 * [Bourbon](http://bourbon.io/)
 * [Bourbon Neat](http://neat.bourbon.io/)
 * [SidebarTransitions](https://github.com/codrops/SidebarTransitions)
