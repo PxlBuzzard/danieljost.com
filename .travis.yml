@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - '0.10'
 install: travis_retry npm install
-script: docpad generate
+script: docpad generate --offline
 deploy:
   provider: s3
   endpoint: danieljost.com.s3-website-us-east-1.amazonaws.com
