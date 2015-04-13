@@ -63,7 +63,7 @@ IF DEFINED KUDU_SELECT_NODE_VERSION_CMD (
     SET /p NODE_EXE=<"%DEPLOYMENT_TEMP%\__nodeVersion.tmp"
     IF !ERRORLEVEL! NEQ 0 goto error
   )
-  
+
   IF EXIST "%DEPLOYMENT_TEMP%\__npmVersion.tmp" (
     SET /p NPM_JS_PATH=<"%DEPLOYMENT_TEMP%\__npmVersion.tmp"
     IF !ERRORLEVEL! NEQ 0 goto error
@@ -96,13 +96,15 @@ IF EXIST "%DEPLOYMENT_SOURCE%\package.json" (
   pushd "%DEPLOYMENT_SOURCE%"
   call :ExecuteCmd !NPM_CMD! install --production --silent
   IF !ERRORLEVEL! NEQ 0 goto error
+  call :ExecuteCmd !NPM_CMD! install -g broccoli-cli
+  IF !ERRORLEVEL! NEQ 0 goto error
   popd
 )
 
 :: 3. Run docpad generation
 echo Building the DocPad site
 cd "%DEPLOYMENT_SOURCE%"
-call node ./node_modules/docpad/bin/docpad generate --env static
+call broccoli build out
 IF !ERRORLEVEL! NEQ 0 goto error
 
 :: 4. KuduSync

@@ -1,10 +1,10 @@
 ---
-title: home
+title: Home
 ---
-{% include "src/layouts/header.html" %}
+{% include "src/partials/header.html" %}
 <div class="header_full">
   <a href="/games">
-  <img src="/img/header/head-spectral.png" class="header_img" alt="MAGIC Center at RIT" />
+  <img src="/img/header/head-spectral.png" class="header_img" alt="Spectral Robot Task Force" />
   <div class="header_text">
     <header>Spectral Robot Task Force</header>
     <summary>A multiplayer turn-based strategy game with robot ghosts fighting werewolves.</summary>
@@ -36,4 +36,4 @@ title: home
     <p class="subgame_text">See my experience in game programming, team management, and web development.</p>
   </div>
 </div>
-{% include "src/layouts/footer.html" %}
+{% include "src/partials/footer.html" %}

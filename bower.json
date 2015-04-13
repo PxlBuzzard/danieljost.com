@@ -1,0 +1,8 @@
+{
+  "name": "Daniel-Jost-Portfolio",
+  "main": "bower_components",
+  "dependencies": {
+    "bourbon": "4.2.2",
+    "neat": "1.7.2"
+  }
+}

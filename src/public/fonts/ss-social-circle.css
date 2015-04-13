@@ -12,14 +12,13 @@
   font-family: "SSSocialCircle";
   src: url('/fonts/ss-social-circle.eot');
   src: url('/fonts/ss-social-circle.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/ss-social-circle.woff') format('woff'),
        url('/fonts/ss-social-circle.ttf')  format('truetype'),
        url('/fonts/ss-social-circle.svg#SSSocialCircle') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-.ss-icon, 
+.ss-icon,
 .ss-icon.ss-social-circle {
   font-family: "SSSocialCircle";
   font-style: normal;

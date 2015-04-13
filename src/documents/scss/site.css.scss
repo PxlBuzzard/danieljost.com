@@ -1,5 +1,6 @@
 @import 'normalize';
 @import 'site-variables';
+@import 'tachyons-box-sizing';
 
 //
 // Google Font Include
@@ -15,14 +16,6 @@
 //
 // Basic Styling
 //
-
-*,
-*:before,
-*:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
 
 body,
 h1,
