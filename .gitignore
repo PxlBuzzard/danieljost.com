@@ -27,3 +27,4 @@ build
 out
 node_modules
 .tmp
+tmp
