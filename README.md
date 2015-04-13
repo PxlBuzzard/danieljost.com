@@ -1,4 +1,4 @@
-# danieljost.com [![Travis](https://travis-ci.org/PxlBuzzard/danieljost.com.svg)](https://travis-ci.org/PxlBuzzard/danieljost.com)
+# danieljost.com [![Travis](https://img.shields.io/travis/PxlBuzzard/danieljost.com.svg)](https://travis-ci.org/PxlBuzzard/danieljost.com) [![Appveyor](https://ci.appveyor.com/api/projects/status/x6j8kby99cixv6ro?svg=true)](https://ci.appveyor.com/project/PxlBuzzard/danieljost-com)
 
 This is the source code for my website, [danieljost.com](http://danieljost.com).
 
