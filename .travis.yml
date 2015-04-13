@@ -2,8 +2,10 @@ language: node_js
 node_js:
 - '0.12'
 install:
-    - travis_retry npm install
+    - travis_retry npm install -g bower
     - travis_retry npm install -g broccoli-cli
+    - travis_retry npm install
+    - travis_retry bower update
 script: broccoli build out
 # deploy:
 #   provider: s3

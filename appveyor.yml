@@ -1,0 +1,27 @@
+environment:
+  matrix:
+    - nodejs_version: "0.12"
+
+# Install scripts. (runs after repo cloning)
+install:
+  # Get the latest stable version of Node 0.STABLE.latest
+  - ps: Install-Product node $env:nodejs_version
+  - set CI=true
+  - npm install -g bower
+  - npm install -g broccoli-cli
+  - npm install
+  - bower update
+
+# Post-install test scripts.
+test_script:
+  # Output useful info for debugging.
+  - node --version
+  - npm --version
+  - bower --version
+  - broccoli build out
+
+# Don't actually build.
+build: off
+
+# Set build version format here instead of in the admin panel.
+version: "{build}"
