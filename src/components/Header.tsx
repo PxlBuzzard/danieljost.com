@@ -1,26 +1,33 @@
 import Link from "next/link";
 
-const linkStyle = {
-    marginRight: 15,
-};
-
-const h1Header = {
-    display: "inline-block",
-    marginRight: 15,
-}
-
-const Header = () => (
+const Header: React.FC = () => (
     <header>
         {/* <h1 style={h1Header}>Daniel Jost</h1> */}
         <Link href="/">
-            <a style={linkStyle}>Home</a>
+            <a className={"link"}>Home</a>
+        </Link>
+        <Link href="/resume">
+            <a className={"link"}>Resume</a>
         </Link>
         <Link href="/games">
-            <a style={linkStyle}>Games</a>
+            <a className={"link"}>Games</a>
         </Link>
         <Link href="/sites">
-            <a style={linkStyle}>Sites</a>
+            <a className={"link"}>Sites</a>
         </Link>
+        <Link href="https://blog.danieljost.com">
+            <a className={"link"}>Blog</a>
+        </Link>
+        <style jsx>{`
+            .header {
+                display: inline-block;
+                margin-right: 15px;
+            }
+
+            .link {
+                margin-right: 15px;
+            }
+        `}</style>
     </header>
 );
 

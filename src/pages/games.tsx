@@ -4,28 +4,40 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 import games from "../data/games.json";
 
-const Page_Games: React.FunctionComponent = () => (
+const Page_Games: React.FC = () => (
     <Layout title="Daniel Jost - Games">
         <h1>Games</h1>
-        {games.map(game => { return (
-        <div className="game-container" key="game.game">
-            <Image className="img-game" src={`/static/img/thumb/game/${game.thumb}`} alt={game.name} width="300px" height="190px" />
-            <div className="game-info">
-                <h2>{game.name}</h2>
-                <Link href={game.link} passHref>
-                    <a>{game.link}</a>
-                </Link>
-                <p>{game.short_desc}</p>
-                <span className="game-year">{game.year}</span>
-            </div>
-
-            <style jsx>{`
+        {games.map((game) => {
+            return (
+                <div className="game-container" key="game.game">
+                    <Link href={game.link}>
+                        <Image
+                            className="img-game"
+                            src={`/static/img/thumb/game/${game.thumb}`}
+                            alt={game.name}
+                            width="300px"
+                            height="190px"
+                        />
+                    </Link>
+                    <div className="game-info">
+                        <h2>{game.name}</h2>
+                        <Link href={game.link} passHref>
+                            <a>{game.link}</a>
+                        </Link>
+                        <p>{game.short_desc}</p>
+                        <span className="game-year">{game.year}</span>
+                    </div>
+                </div>
+            );
+        })}
+        <style jsx>{`
             .game-container {
                 display: flex;
                 position: relative;
                 margin-bottom: 20px;
                 background-color: #eee;
                 border-radius: 5px;
+                color: #000;
             }
             .game-container:nth-child(even) {
                 background-color: #ccc;
@@ -48,9 +60,7 @@ const Page_Games: React.FunctionComponent = () => (
             h2 {
                 margin: 0 0 5px 0;
             }
-            `}</style>
-        </div>
-        )})}
+        `}</style>
     </Layout>
 );
 
