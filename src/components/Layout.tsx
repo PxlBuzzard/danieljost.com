@@ -1,7 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 import Head from "next/head";
-import Header from "../components/Header";
+import Header from "./Header";
 
 type Props = {
     title?: string;
@@ -31,7 +31,7 @@ const Layout: React.FunctionComponent<Props> = ({
         {children}
         <footer>
             <hr />
-            <span>&copy; Daniel Jost 2021</span>
+            <span>&copy; Daniel Jost 2021.</span>
         </footer>
         </div>
     </>

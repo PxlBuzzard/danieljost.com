@@ -11,12 +11,15 @@ const h1Header = {
 
 const Header = () => (
     <header>
-        <h1 style={h1Header}>Daniel Jost</h1>
+        {/* <h1 style={h1Header}>Daniel Jost</h1> */}
         <Link href="/">
             <a style={linkStyle}>Home</a>
         </Link>
-        <Link href="/about">
-            <a style={linkStyle}>About</a>
+        <Link href="/games">
+            <a style={linkStyle}>Games</a>
+        </Link>
+        <Link href="/sites">
+            <a style={linkStyle}>Sites</a>
         </Link>
     </header>
 );

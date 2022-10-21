@@ -1,0 +1,90 @@
+[
+    {
+        "game": "spectral",
+        "link": "http://circularstudios.com/",
+        "name": "Spectral Robot Task Force",
+        "year": "2014",
+        "short_desc": "A multiplayer turn-based strategy game with robot ghosts fighting werewolves.",
+        "thumb": "spectral.png"
+    },
+    {
+        "game": "dash",
+        "link": "https://github.com/Circular-Studios/Dash",
+        "year": "2014",
+        "name": "Dash Engine",
+        "short_desc": "A free and open 3D game engine written in D.",
+        "thumb": "dash.png"
+    },
+    {
+        "game": "sgpx",
+        "link": "",
+        "year": "2014",
+        "name": "SGPX",
+        "short_desc": "Race against the clock to beat your friends in this Unity3D game.",
+        "thumb": "sgpx.png"
+    },
+    {
+        "game": "popemall",
+        "link": "http://apps.microsoft.com/windows/en-US/app/pop-em-all/554c3f95-5857-418d-a9a7-4484f41174ed",
+        "year": "2013",
+        "name": "Pop 'Em All!",
+        "short_desc": "See how many bubbles you can pop before they collide!",
+        "thumb": "popemall.png"
+    },
+    {
+        "game": "storytown",
+        "link": "http://storytowngame.com/",
+        "year": "2013",
+        "name": "Storytown",
+        "short_desc": "An engagingly-fast card game where you compete to be the top actor.",
+        "thumb": "storytown.png"
+    },
+    {
+        "game": "gridlock",
+        "link": "",
+        "year": "2012",
+        "name": "Gridlock",
+        "short_desc": "An online multiplayer shooter developed in Unity/C#.",
+        "thumb": "gridlock.png"
+    },
+    {
+        "game": "fourguns",
+        "link": "https://github.com/PxlBuzzard/Four-Guns",
+        "year": "2012",
+        "name": "Four Guns",
+        "short_desc": "A 2D cooperative arcade shooter built in C#/XNA.",
+        "thumb": "fourguns.png"
+    },
+    {
+        "game": "roadhop",
+        "link": "http://www.newgrounds.com/portal/view/610270",
+        "year": "2012",
+        "name": "Road Hop",
+        "short_desc": "An arcade puzzler inspired by Frogger and developed in Flash/AS3.",
+        "thumb": "roadhop.png"
+    },
+    {
+        "game": "desktopbattle",
+        "link": "https://github.com/PxlBuzzard/Desktop_Battle",
+        "year": "2011",
+        "name": "Desktop Battle",
+        "short_desc": "A simple C#/XNA shooter built by myself as an introduction to game development.",
+        "thumb": "desktopbattle.png"
+    },
+    {
+        "game": "conflictearth2142",
+        "link": "",
+        "year": "20xx",
+        "name": "Conflict Earth 2142",
+        "short_desc": "An ambitious total conversion for Battlefield 2142.",
+        "thumb": "conflictearth.png"
+    },
+    {
+        "game": "thelanceslegend",
+        "link": "http://www.indiedb.com/games/the-lances-legend",
+        "year": "20xx",
+        "name": "The Lance's Legend",
+        "short_desc": "An RPG that represents my first foray into game design, game logic, and team management.",
+        "thumb": "thelanceslegend.png"
+    }
+]
