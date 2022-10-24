@@ -1,6 +1,20 @@
 [
     {
-        "game": "spectral",
+        "key": "playdate-picross",
+        "link": "https://github.com/PxlBuzzard/playdate-picross",
+        "name": "Pxl Picross for Playdate",
+        "year": "2022",
+        "short_desc": "A picross game for the Playdate."
+    },
+    {
+        "key": "game2020",
+        "link": "https://game2020.danieljost.com/",
+        "name": "Game2020",
+        "year": "2020",
+        "short_desc": "An experiment to build a platformer using hex-engine."
+    },
+    {
+        "key": "spectral",
         "link": "http://circularstudios.com/",
         "name": "Spectral Robot Task Force",
         "year": "2014",
@@ -8,7 +22,7 @@
         "thumb": "spectral.png"
     },
     {
-        "game": "dash",
+        "key": "dash",
         "link": "https://github.com/Circular-Studios/Dash",
         "year": "2014",
         "name": "Dash Engine",
@@ -16,7 +30,7 @@
         "thumb": "dash.png"
     },
     {
-        "game": "sgpx",
+        "key": "sgpx",
         "link": "",
         "year": "2014",
         "name": "SGPX",
@@ -24,7 +38,7 @@
         "thumb": "sgpx.png"
     },
     {
-        "game": "popemall",
+        "key": "popemall",
         "link": "http://apps.microsoft.com/windows/en-US/app/pop-em-all/554c3f95-5857-418d-a9a7-4484f41174ed",
         "year": "2013",
         "name": "Pop 'Em All!",
@@ -32,7 +46,7 @@
         "thumb": "popemall.png"
     },
     {
-        "game": "storytown",
+        "key": "storytown",
         "link": "http://storytowngame.com/",
         "year": "2013",
         "name": "Storytown",
@@ -40,7 +54,7 @@
         "thumb": "storytown.png"
     },
     {
-        "game": "gridlock",
+        "key": "gridlock",
         "link": "",
         "year": "2012",
         "name": "Gridlock",
@@ -48,7 +62,7 @@
         "thumb": "gridlock.png"
     },
     {
-        "game": "fourguns",
+        "key": "fourguns",
         "link": "https://github.com/PxlBuzzard/Four-Guns",
         "year": "2012",
         "name": "Four Guns",
@@ -56,7 +70,7 @@
         "thumb": "fourguns.png"
     },
     {
-        "game": "roadhop",
+        "key": "roadhop",
         "link": "http://www.newgrounds.com/portal/view/610270",
         "year": "2012",
         "name": "Road Hop",
@@ -64,7 +78,7 @@
         "thumb": "roadhop.png"
     },
     {
-        "game": "desktopbattle",
+        "key": "desktopbattle",
         "link": "https://github.com/PxlBuzzard/Desktop_Battle",
         "year": "2011",
         "name": "Desktop Battle",
@@ -72,7 +86,7 @@
         "thumb": "desktopbattle.png"
     },
     {
-        "game": "conflictearth2142",
+        "key": "conflictearth2142",
         "link": "",
         "year": "20xx",
         "name": "Conflict Earth 2142",
@@ -80,7 +94,7 @@
         "thumb": "conflictearth.png"
     },
     {
-        "game": "thelanceslegend",
+        "key": "thelanceslegend",
         "link": "http://www.indiedb.com/games/the-lances-legend",
         "year": "20xx",
         "name": "The Lance's Legend",
