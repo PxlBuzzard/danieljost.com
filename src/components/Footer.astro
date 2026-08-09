@@ -1,0 +1,22 @@
+---
+const year = new Date().getFullYear();
+const socialLinks = [
+  { href: "https://github.com/PxlBuzzard", label: "GitHub" },
+  { href: "https://www.linkedin.com/in/danieljost/", label: "LinkedIn" },
+  { href: "https://twitter.com/_DanielJost_", label: "X / Twitter" },
+];
+---
+
+<footer class="site-footer">
+  <div class="footer-content content-width">
+    <div>
+      <p class="copyright">© {year} Daniel Jost</p>
+      <p class="email">daniel [at] danieljost.com</p>
+    </div>
+    <nav aria-label="Social links">
+      <ul class="social-links">
+        {socialLinks.map(({ href, label }) => <li><a href={href} target="_blank" rel="noopener noreferrer">{label}</a></li>)}
+      </ul>
+    </nav>
+  </div>
+</footer>

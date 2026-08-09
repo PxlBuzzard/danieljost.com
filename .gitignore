@@ -1,29 +1,25 @@
-# Ignore hidden folders #
-# This takes care of .tmp, .sass-cache, and many others #
-.*/
+# Dependencies
+node_modules/
 
-# Ignore OS generated files #
-.DS_Store*
-ehthumbs.db
-Icon?
-Thumbs.db
+# Astro output and generated types
+dist/
+.astro/
 
-# Always-ignore files and folders #
-*.diff
-*.err
+# Cloudflare
+.wrangler/
+.dev.vars
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs
 *.log
-*.orig
-*.rej
-*.swn
-*.swo
-*.swp
-._*
-*~
+npm-debug.log*
 
-# Ignore for Yeoman-Jekyll projects #
-bower_components
-dist
-build
-out
-node_modules
-.tmp
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/
+*.swp

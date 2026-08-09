@@ -1,0 +1,136 @@
+---
+import type { AssetCategory, Project } from "../types/portfolio";
+
+interface Props {
+  project: Project;
+  category: AssetCategory;
+}
+
+const { project, category } = Astro.props;
+const Tag = project.link ? "a" : "article";
+const imagePath = project.thumb ? `/static/img/thumb/${category}/${project.thumb}` : undefined;
+---
+
+<Tag
+  class:list={["project-card", { "project-card--linked": project.link, "project-card--no-image": !imagePath }]}
+  href={project.link || undefined}
+  target={project.link ? "_blank" : undefined}
+  rel={project.link ? "noopener noreferrer" : undefined}
+>
+  {
+    imagePath ? (
+      <img class="project-image" src={imagePath} alt={`${project.name} project thumbnail`} width="300" height="190" loading="lazy" />
+    ) : (
+      <div class="project-placeholder" aria-hidden="true"><span>{project.name.charAt(0)}</span></div>
+    )
+  }
+  <div class="project-copy">
+    <h2>{project.name}</h2>
+    <p class="project-year">{project.year}</p>
+    {project.short_desc && <p>{project.short_desc}</p>}
+    {project.link && <span class="project-cta" aria-hidden="true">View project <span>↗</span></span>}
+  </div>
+</Tag>
+
+<style>
+  .project-card {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgb(255 255 255 / 10%);
+    border-radius: 6px;
+    background: rgb(5 18 31 / 30%);
+    box-shadow: 0 0 5px #000;
+    color: var(--color-text);
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .project-card--linked {
+    transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+  }
+
+  .project-card--linked:hover {
+    border-color: rgb(255 255 255 / 45%);
+    box-shadow: 0 0 12px rgb(255 255 255 / 28%);
+    color: var(--color-text);
+    transform: translateY(-3px);
+  }
+
+  .project-image,
+  .project-placeholder {
+    width: 100%;
+    aspect-ratio: 300 / 190;
+  }
+
+  .project-image {
+    object-fit: cover;
+    transition: filter 180ms ease;
+  }
+
+  .project-card--linked:hover .project-image {
+    filter: saturate(1.4);
+  }
+
+  .project-placeholder {
+    display: grid;
+    place-items: center;
+    background:
+      radial-gradient(circle at 25% 20%, rgb(52 152 219 / 55%), transparent 35%),
+      linear-gradient(135deg, #0b2238, #24547a);
+  }
+
+  .project-placeholder span {
+    display: grid;
+    width: 4rem;
+    height: 4rem;
+    place-items: center;
+    border: 2px solid rgb(255 255 255 / 70%);
+    border-radius: 50%;
+    font-family: var(--font-display);
+    font-size: 2rem;
+  }
+
+  .project-copy {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1.35rem;
+    line-height: 1.2;
+    text-shadow: 1px 1px 5px #000;
+  }
+
+  p {
+    margin: 0.7rem 0 0;
+    color: var(--color-muted);
+  }
+
+  .project-year {
+    margin-top: 0.35rem;
+    color: #8dd0f8;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .project-cta {
+    margin-top: auto;
+    padding-top: 1rem;
+    color: #8dd0f8;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .project-card--linked:hover {
+      transform: none;
+    }
+  }
+</style>

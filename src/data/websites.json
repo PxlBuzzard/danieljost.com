@@ -1,0 +1,79 @@
+[
+  {
+    "key": "agentada",
+    "link": "https://web.archive.org/web/20141023021803/http://agentada.com/",
+    "name": "Agentada",
+    "thumb": "agentada.png",
+    "year": "Fall 2014"
+  },
+  {
+    "key": "statsatlast",
+    "link": "",
+    "name": "Stats At Last",
+    "thumb": "statsatlast.png",
+    "year": "Spring 2014"
+  },
+  {
+    "key": "openmusic",
+    "link": "",
+    "name": "OpenMusic",
+    "thumb": "openmusic.png",
+    "year": "Fall 2013"
+  },
+  {
+    "key": "magic",
+    "link": "https://magic.rit.edu/",
+    "name": "RIT MAGIC Center",
+    "thumb": "magic.png",
+    "year": "Summer 2013"
+  },
+  {
+    "key": "kkdesign",
+    "link": "",
+    "name": "KJKamphoefner Design",
+    "thumb": "kkdesign.png",
+    "year": "Spring 2012"
+  },
+  {
+    "key": "archcomputermemory",
+    "link": "",
+    "name": "Arch Computer Memory",
+    "thumb": "acm.png",
+    "year": "Summer 2012"
+  },
+  {
+    "key": "hipointe",
+    "link": "https://hipointestl.com/",
+    "name": "Hi Pointe Business Center",
+    "thumb": "hipointe.png",
+    "year": "Summer 2012"
+  },
+  {
+    "key": "luannesteele",
+    "link": "https://luannspencersteele.com/",
+    "name": "Luanne Spencer Steele",
+    "thumb": "luannespencersteele.png",
+    "year": "Spring 2012"
+  },
+  {
+    "key": "courtneydoctor",
+    "link": "https://www.courtneydoctor.org/",
+    "name": "Courtney Doctor",
+    "thumb": "courtneydoctor.png",
+    "year": "Fall 2011"
+  },
+  {
+    "key": "terristoptreatments",
+    "link": "https://terristoptreatments.com/",
+    "name": "Terri's Top Treatments",
+    "thumb": "terristoptreatments.png",
+    "year": "Summer 2011"
+  },
+  {
+    "key": "henryford",
+    "link": "https://ford.danieljost.com/",
+    "name": "Henry Ford",
+    "thumb": "henryford.png",
+    "year": "Spring 2009"
+  }
+]

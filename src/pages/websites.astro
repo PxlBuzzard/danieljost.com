@@ -1,0 +1,18 @@
+---
+import ProjectCard from "../components/ProjectCard.astro";
+import websitesData from "../data/websites.json";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import type { Website } from "../types/portfolio";
+
+const websites = websitesData satisfies Website[];
+---
+
+<BaseLayout title="Websites – Daniel Jost" description="A selection of websites Daniel Jost built for businesses, organizations, and professionals.">
+  <header class="page-heading">
+    <h1>Websites</h1>
+    <p>A selection of websites built for businesses, organizations, and independent professionals.</p>
+  </header>
+  <div class="project-grid">
+    {websites.map((website) => <ProjectCard project={website} category="website" />)}
+  </div>
+</BaseLayout>

@@ -1,0 +1,18 @@
+---
+import ProjectCard from "../components/ProjectCard.astro";
+import gamesData from "../data/games.json";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import type { Game } from "../types/portfolio";
+
+const games = gamesData satisfies Game[];
+---
+
+<BaseLayout title="Games – Daniel Jost" description="Games designed and developed by Daniel Jost, from Playdate projects to multiplayer and arcade games.">
+  <header class="page-heading">
+    <h1>Games</h1>
+    <p>Games and game technology I have designed, programmed, and built with talented collaborators.</p>
+  </header>
+  <div class="project-grid">
+    {games.map((game) => <ProjectCard project={game} category="game" />)}
+  </div>
+</BaseLayout>

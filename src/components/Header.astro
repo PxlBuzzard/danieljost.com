@@ -1,0 +1,36 @@
+---
+const pathname = Astro.url.pathname;
+const navigation = [
+  { href: "/", label: "Home" },
+  { href: "/resume", label: "Résumé" },
+  { href: "/games", label: "Games" },
+  { href: "/websites", label: "Websites" },
+];
+
+const isCurrent = (href: string) =>
+  href === "/" ? pathname === href : pathname === href || pathname.startsWith(`${href}/`);
+---
+
+<header class="site-header">
+  <nav class="navigation content-width" aria-label="Primary navigation">
+    <a class="brand" href="/" aria-label="Daniel Jost, home">
+      <img src="/static/img/me/daniel_header.jpg" alt="" width="65" height="65" />
+      <span>Daniel Jost</span>
+    </a>
+
+    <ul class="nav-links">
+      {
+        navigation.map(({ href, label }) => (
+          <li>
+            <a href={href} aria-current={isCurrent(href) ? "page" : undefined}>
+              {label}
+            </a>
+          </li>
+        ))
+      }
+      <li>
+        <a href="https://blog.danieljost.com/">Blog</a>
+      </li>
+    </ul>
+  </nav>
+</header>

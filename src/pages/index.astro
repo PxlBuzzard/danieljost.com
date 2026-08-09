@@ -1,0 +1,136 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const sections = [
+  {
+    href: "/games",
+    image: "/static/img/thumb/game/spectral.png",
+    name: "Games",
+    description: "Explore the games I designed and programmed, often in collaboration with amazing people.",
+  },
+  {
+    href: "/websites",
+    image: "/static/img/thumb/website/statsatlast.png",
+    name: "Websites",
+    description: "See websites I built for businesses, organizations, and professionals.",
+  },
+  {
+    href: "/resume",
+    image: "/static/img/me/danieljost5.png",
+    name: "Résumé",
+    description: "Read about my experience in software engineering, games, and team leadership.",
+  },
+];
+---
+
+<BaseLayout
+  title="Daniel Jost – Software Engineer and Game Developer"
+  description="Daniel Jost is a software engineer specializing in front-end development who creates open source software and games."
+>
+  <a class="hero" href="/games">
+    <img src="/static/img/header/head-spectral.png" alt="Spectral Robot Task Force illustrated game scene" width="1080" height="380" />
+    <div class="hero-copy">
+      <h1>Spectral Robot Task Force</h1>
+      <p>A multiplayer turn-based strategy game with robot ghosts fighting werewolves.</p>
+    </div>
+  </a>
+
+  <section class="intro" aria-labelledby="introduction">
+    <h2 id="introduction">Hey, I’m Daniel Jost.</h2>
+    <p>I am a software engineer specializing in front-end work, and I like working on open source software and games on the side.</p>
+    <p>I currently work at <a href="https://www.nerdwallet.com/" target="_blank" rel="noopener noreferrer">NerdWallet</a>. Previously, I worked at <a href="https://www.microsoft.com/" target="_blank" rel="noopener noreferrer">Microsoft</a> on <a href="https://www.microsoft.com/en-us/security/business/endpoint-management/microsoft-intune" target="_blank" rel="noopener noreferrer">Intune</a>.</p>
+  </section>
+
+  <nav class="home-sections" aria-label="Portfolio sections">
+    {
+      sections.map((section) => (
+        <a href={section.href}>
+          <img src={section.image} alt="" width="300" height="190" />
+          <div>
+            <h2>{section.name}</h2>
+            <p>{section.description}</p>
+          </div>
+        </a>
+      ))
+    }
+  </nav>
+</BaseLayout>
+
+<style>
+  .hero {
+    display: block;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .hero:hover {
+    color: var(--color-text);
+  }
+
+  .home-sections {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-3);
+  }
+
+  .home-sections a {
+    overflow: hidden;
+    border-radius: 6px;
+    background: rgb(5 18 31 / 35%);
+    box-shadow: 0 0 5px #000;
+    color: var(--color-text);
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow 180ms ease, transform 180ms ease;
+  }
+
+  .home-sections a:hover {
+    box-shadow: 0 0 12px rgb(255 255 255 / 32%);
+    color: var(--color-text);
+    transform: translateY(-3px);
+  }
+
+  .home-sections img {
+    width: 100%;
+    aspect-ratio: 300 / 190;
+    object-fit: cover;
+  }
+
+  .home-sections div {
+    padding: 1rem;
+  }
+
+  .home-sections h2,
+  .home-sections p {
+    margin: 0;
+  }
+
+  .home-sections p {
+    margin-top: 0.7rem;
+    color: var(--color-muted);
+  }
+
+  @media (max-width: 800px) {
+    .home-sections {
+      grid-template-columns: 1fr;
+    }
+
+    .home-sections a {
+      display: grid;
+      grid-template-columns: minmax(140px, 35%) 1fr;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 540px) {
+    .home-sections a {
+      display: block;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .home-sections a:hover {
+      transform: none;
+    }
+  }
+</style>
