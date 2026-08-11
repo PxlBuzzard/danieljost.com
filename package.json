@@ -11,7 +11,8 @@
     "lint": "biome lint .",
     "format": "biome format --write .",
     "check": "astro check && biome ci .",
-    "deploy": "npm run build && wrangler deploy"
+    "deploy": "npm run build && wrangler deploy",
+    "images:convert": "node scripts/convert-images.mjs"
   },
   "dependencies": {
     "astro": "^7.2.0"
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
     "@biomejs/biome": "2.5.7",
+    "sharp": "^0.35.3",
     "typescript": "^6.0.3",
     "wrangler": "^4.120.0"
   }

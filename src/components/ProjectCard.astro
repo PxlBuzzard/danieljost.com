@@ -1,5 +1,6 @@
 ---
 import type { AssetCategory, Project } from "../types/portfolio";
+import ResponsiveImage from "./ResponsiveImage.astro";
 
 interface Props {
   project: Project;
@@ -19,7 +20,7 @@ const imagePath = project.thumb ? `/static/img/thumb/${category}/${project.thumb
 >
   {
     imagePath ? (
-      <img class="project-image" src={imagePath} alt={`${project.name} project thumbnail`} width="300" height="190" loading="lazy" />
+      <ResponsiveImage class="project-image" src={imagePath} alt={`${project.name} project thumbnail`} width={300} height={190} loading="lazy" />
     ) : (
       <div class="project-placeholder" aria-hidden="true"><span>{project.name.charAt(0)}</span></div>
     )

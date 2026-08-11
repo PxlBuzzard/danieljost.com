@@ -1,4 +1,6 @@
 ---
+import ResponsiveImage from "./ResponsiveImage.astro";
+
 const pathname = Astro.url.pathname;
 const navigation = [
   { href: "/", label: "Home" },
@@ -14,7 +16,7 @@ const isCurrent = (href: string) =>
 <header class="site-header">
   <nav class="navigation content-width" aria-label="Primary navigation">
     <a class="brand" href="/" aria-label="Daniel Jost, home">
-      <img src="/static/img/me/daniel_header.jpg" alt="" width="65" height="65" />
+      <ResponsiveImage src="/static/img/me/daniel_header.jpg" alt="" width={65} height={65} />
       <span>Daniel Jost</span>
     </a>
 
