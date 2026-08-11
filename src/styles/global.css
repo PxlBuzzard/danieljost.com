@@ -306,8 +306,14 @@ img {
 
   .nav-links {
     width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+  }
+
+  .nav-links li {
+    flex: 0 0 auto;
   }
 
   .nav-links a {
@@ -331,13 +337,11 @@ img {
   }
 
   .nav-links {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
   }
 
   .nav-links a {
-    justify-content: center;
-    padding-inline: 0.35rem;
+    padding-inline: 0.65rem;
     font-size: 0.92rem;
   }
 
