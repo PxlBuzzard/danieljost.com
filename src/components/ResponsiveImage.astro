@@ -7,13 +7,14 @@ interface Props {
   loading?: "lazy" | "eager";
   fetchPriority?: "high" | "low" | "auto";
   class?: string;
+  fluid?: boolean;
 }
 
-const { src, alt, width, height, loading, fetchPriority, class: className } = Astro.props;
+const { src, alt, width, height, loading, fetchPriority, class: className, fluid = false } = Astro.props;
 const modernImagePath = (extension: string) => src.replace(/\.(png|jpe?g)$/i, `.${extension}`);
 ---
 
-<picture>
+<picture class:list={[className, { "responsive-image": fluid }]}>
   <source srcset={modernImagePath("avif")} type="image/avif" />
   <source srcset={modernImagePath("webp")} type="image/webp" />
   <img
@@ -26,3 +27,17 @@ const modernImagePath = (extension: string) => src.replace(/\.(png|jpe?g)$/i, `.
     class={className}
   />
 </picture>
+
+<style>
+  .responsive-image {
+    display: block;
+    width: 100%;
+  }
+
+  .responsive-image > img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+</style>

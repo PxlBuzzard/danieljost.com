@@ -36,6 +36,7 @@ const sections = [
       height={380}
       loading="eager"
       fetchPriority="high"
+      fluid
     />
     <div class="hero-copy">
       <h1>Spectral Robot Task Force</h1>
@@ -53,7 +54,7 @@ const sections = [
     {
       sections.map((section) => (
         <a href={section.href}>
-          <ResponsiveImage src={section.image} alt="" width={300} height={190} loading="lazy" />
+          <ResponsiveImage src={section.image} alt="" width={300} height={190} loading="lazy" fluid />
           <div>
             <h2>{section.name}</h2>
             <p>{section.description}</p>
