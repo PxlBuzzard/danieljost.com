@@ -10,7 +10,7 @@
   --color-shadow: rgb(0 0 0 / 50%);
   --font-sans:
     Inter, Roboto, Lato, "Open Sans", "Helvetica Neue", Arial, sans-serif;
-  --font-display: Georgia, "Times New Roman", serif;
+  --font-display: var(--font-courgette);
   --content-width: 1080px;
   --space-1: 0.5rem;
   --space-2: 1rem;
