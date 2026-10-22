@@ -6,14 +6,14 @@ Replace the legacy DocPad site on the `astro` branch with a statically generated
 
 ## Content sources and precedence
 
-| Area | Source | Migration rule |
-| --- | --- | --- |
-| Home | `origin/nextjs:src/pages/index.tsx` | Use the newer biography as the initial copy. |
-| Games | `origin/nextjs:src/data/games.json` | Reuse this file as the canonical games dataset, including the newer Playdate and Game2020 entries. |
-| Websites | `src/documents/websites/index.html.swig` | Extract the frontmatter list into a new `src/data/websites.json` file with the same data-driven pattern as games. |
-| Résumé | Current `resume` page and PDF | Preserve `/resume` and provide a direct link to the PDF. Do not migrate the Google Docs embed. |
-| Images and icons | `origin/nextjs:public/static` plus current assets not present there | Preserve existing asset paths initially to reduce migration risk. |
-| 404 page | Current `404.html.swig` | Rebuild as `src/pages/404.astro` using the shared layout and metadata. |
+| Area             | Source                                                              | Migration rule                                                                                                    |
+| ---------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Home             | `origin/nextjs:src/pages/index.tsx`                                 | Use the newer biography as the initial copy.                                                                      |
+| Games            | `origin/nextjs:src/data/games.json`                                 | Reuse this file as the canonical games dataset, including the newer Playdate and Game2020 entries.                |
+| Websites         | `src/documents/websites/index.html.swig`                            | Extract the frontmatter list into a new `src/data/websites.json` file with the same data-driven pattern as games. |
+| Résumé           | Current `resume` page and PDF                                       | Preserve `/resume` and provide a direct link to the PDF. Do not migrate the Google Docs embed.                    |
+| Images and icons | `origin/nextjs:public/static` plus current assets not present there | Preserve existing asset paths initially to reduce migration risk.                                                 |
+| 404 page         | Current `404.html.swig`                                             | Rebuild as `src/pages/404.astro` using the shared layout and metadata.                                            |
 
 The Next.js branch is only a partial migration: it has no websites or résumé page, and its games page references `game.game` even though the JSON uses `key`. Astro should use the JSON's `key` field directly and should not copy that mismatch.
 
@@ -71,7 +71,6 @@ interface Game {
 ```
 
 Implementation notes:
-
 - An empty `link` means the card is not clickable; do not render an empty anchor.
 - Audit every external link during migration. If the original page is stale or unavailable, replace `link` with a verified, representative `web.archive.org` snapshot instead of leaving a broken URL.
 - `thumb` is optional because the two newest games do not currently have thumbnails.
@@ -173,7 +172,6 @@ npm run preview
 ```
 
 Then verify:
-
 - all five routes return the expected page;
 - internal navigation and the PDF link work;
 - each stale external project URL points to a working, relevant Archive.org snapshot;

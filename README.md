@@ -41,7 +41,6 @@ Cloudflare authentication and the `danieljost.com` custom domain are configured 
 ## Content and assets
 
 Portfolio entries are maintained in:
-
 - `src/data/games.json`
 - `src/data/websites.json`
 
